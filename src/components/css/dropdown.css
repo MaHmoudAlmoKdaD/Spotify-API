@@ -1,0 +1,109 @@
+
+  .dataResult {
+    margin-top: 5px;
+    margin-left: 35%;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+    
+  }
+  
+  .dataResult::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .dataResult .dataItem {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+  }
+  .dataResult .dataItem:hover {
+    color: rgb(128, 128, 128);
+    background-color: lightgrey;
+  }
+  
+  .dataItem p {
+    margin-left: 10px;
+  }
+
+ 
+  @media (max-width: 1025px) {
+    .dataResult {
+      margin-left: 30%;
+    }
+    .searchInputs {
+      margin-top: 20px;
+      margin-left: 30%;
+    }
+    
+  }
+  @media (max-width: 900px) {
+    .dataResult {
+      margin-left: 25%;
+    }
+    .searchInputs {
+      margin-top: 20px;
+      margin-left: 25%;
+    }
+    
+  }
+  @media (max-width: 600px) {
+    .dataResult {
+      margin-left: 15%;
+    }
+    .searchInputs {
+      margin-top: 20px;
+      margin-left: 15%;
+    }
+    
+  }
+  @media (max-width: 450px) {
+    .dataResult {
+      margin-left: 5%;
+    }
+    .searchInputs {
+      margin-top: 20px;
+      margin-left: 5%;
+    }
+    
+  }
+  
+@media (max-width: 900px) {
+    .dataResult {
+      margin-left: 25%;
+    }
+    .searchInputs {
+      margin-top: 20px;
+      margin-left: 25%;
+    }
+    
+}
+  @media (max-width: 600px) {
+    .on-maxwidth-smallerthan-600{
+        font-size: larger;
+    }
+    .dataResult {
+      margin-left: 15%;
+    }
+    .searchInputs {
+      margin-top: 20px;
+      margin-left: 15%;
+    }
+    
+  }
+  @media (max-width: 450px) {
+    .dataResult {
+      margin-left: 5%;
+    }
+    .searchInputs {
+      margin-top: 20px;
+      margin-left: 5%;
+    }
+    
+  }

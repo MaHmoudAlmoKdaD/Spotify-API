@@ -1,0 +1,25 @@
+.btn--login{
+    width: 50%;
+    height: 5rem;
+    margin: 25% auto 0 auto;
+    border: 1px rgb(177, 177, 177) solid;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    color: rgb(68, 67, 67);
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+  }
+  .btn--login p{
+    justify-self: flex-end ;
+    font-size: xx-large;
+  }
+  .btn--login .spotfiy{
+    border-radius: 50%;
+    color: rgb(0, 121, 0);
+    text-align: right;
+    padding-right: 10px;
+    font-size: 4rem;
+  }
+  /* _____________________________________________ */

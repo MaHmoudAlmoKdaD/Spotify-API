@@ -1,0 +1,11 @@
+
+.error{
+    color: #f00;
+    font-size: 90px;
+  }
+
+  @media (max-width: 900px) {
+      .error{
+          font-size: 50px;
+      }
+  }
