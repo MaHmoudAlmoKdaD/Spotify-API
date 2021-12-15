@@ -1,9 +1,10 @@
 # Spotfiy API
   To run this app on your computer you need to run this commends in your terminal:
+  - `npm install` to install node-model folder
   - `npm install axios`
   - `npm install react-router-dom@6`
   - `npm install react-icons --save`
-  -  Add Bootstarp, Awesone Icons links to your index.html file in public folder
+  -  There are Bootstarp, Awesone Icons links inside index.html file in public folder
   
 ## How create this Project:
 - go to spotfiy site and create web app to get client-id and client-secret.

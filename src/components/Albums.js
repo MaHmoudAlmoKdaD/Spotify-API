@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';  
 import Error from './Error'
@@ -19,6 +20,7 @@ const Albums = (props) => {
         }).then(res => {
             setAlbums(res)
             setLoading(false)
+            console.log(res.data)
         }).catch(error => {
             console.log(error);
         })
@@ -39,6 +41,9 @@ const Albums = (props) => {
         } 
     }
 
+    const handleSpotifyPreviewAlbum = (URL) => {
+        window.location.href = URL
+    }
     return (     
         <div>
             <div className="text-center">
@@ -50,9 +55,11 @@ const Albums = (props) => {
                 </h3>
             </div>
             <div className="text-center mt-2"> <h1>Albums</h1> </div>
+
             {/* if loading or does not have albums return nothing class Name otherwise , row class */}
             <div className={ loading || albums.data.items.length === 0 ?  null : "row"} >
                 { loading ? <div className='text-center text-success'>Loading ...</div> : 
+                
                 // if does not have albums return Error componet otherwise show the Albums
                     albums.data.items.length !== 0 ?
                     albums.data.items.map((album, key) =>{
@@ -65,8 +72,10 @@ const Albums = (props) => {
                                 <div className="card-header text-center" >
                                     <img 
                                         style={{maxWidth : "90%"}} 
+                                        className='cursor'
                                         src={handleImage(album.images)} 
-                                        alt='Sorry no image available for this album' 
+                                        alt='Sorry no image available for this album'
+                                        onClick={() => handleSpotifyPreviewAlbum(album.external_urls.spotify)} 
                                     />
                                 </div>
                                 <div className="card-body">

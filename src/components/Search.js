@@ -6,6 +6,19 @@ import { AiOutlineClose } from "react-icons/ai";
 import Dropdown from './Dropdown';
 import Artists from './Artists';
 
+// split token from URL and get token to add it to header in axios 
+const getReturnedParamsFromSpotifyAuth = (hash) =>{
+    const stringAfterHashing = hash.substring(1); 
+    const paramsInUrl = stringAfterHashing.split("&");
+    const paramsSplitUP = paramsInUrl.reduce((accumulater, currnetValue) => {
+        const [key, value] = currnetValue.split('=');
+        accumulater[key] = value;
+        return accumulater;
+    }, {});
+    return paramsSplitUP;
+}
+
+
 const initialState = {
     artists: {},
     error : ''
@@ -35,6 +48,19 @@ const Search = () => {
 
     // to fetch data when search state changed 
     useEffect(() => {
+        if(window.location.hash){
+            const {
+                access_token,
+                expires_in,
+                token_type,
+            } = getReturnedParamsFromSpotifyAuth(window.location.hash);
+        
+            localStorage.clear();
+            localStorage.setItem("accessToken", access_token);
+            localStorage.setItem("expiresIn", expires_in);
+            localStorage.setItem("tokenType", token_type)
+            
+        }
         const TOKEN = localStorage.getItem("accessToken")
         if(search){
             axios.get(`https://api.spotify.com/v1/search?q=${search}&type=artist&market=ES&limit=50&offset=0`,{
