@@ -4,6 +4,7 @@
   - `npm install axios`
   - `npm install react-router-dom@6`
   - `npm install react-icons --save`
+  - `yarn start`
   -  There are Bootstarp, Awesone Icons links inside index.html file in public folder
   
 ## How create this Project:
