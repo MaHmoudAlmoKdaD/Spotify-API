@@ -21,6 +21,9 @@ we can get data when we write any character in this input field, With `Dropdown`
 ### Get Albums For Each Artist: 
 when we want to get all `albums` for specific Artist just you need to click on the `Image` for this Artist to get his Albums.
 
+### opens a new tab to the Spotify preview of that album.
+you just need to click on Image of that album
+
 ## Notes:
 - The main Component is Search component where fetched the data from API and spread them to another Components.
 - EASY TO MAINTAIN: If you want to update any component just you need to go throgh that component and do what you want.
